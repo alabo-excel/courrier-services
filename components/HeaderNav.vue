@@ -8,10 +8,19 @@
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto links">
-          <div class="p-2">Home</div>
-          <div class="p-2">Sevices</div>
-          <div class="p-2">About Us</div>
-          <div class="p-2">Contact Us</div>
+          <NuxtLink to="/">
+            <div class="p-2">Home</div>
+          </NuxtLink>
+          <NuxtLink to="/services">
+            <div class="p-2">Sevrices</div>
+          </NuxtLink>
+          <NuxtLink to="/about">
+            <div class="p-2">About Us</div>
+          </NuxtLink>
+          <NuxtLink to="/contact">
+            <div class="p-2">Contact Us</div>
+          </NuxtLink>
+          <!-- <NuxtLink to="/"></NuxtLink> -->
           <div class="p-2 px-4 btn1">Track</div>
         </b-navbar-nav>
       </b-collapse>
@@ -31,6 +40,13 @@
   width: 100%;
   z-index: 10;
   font-family: "Poppins", sans-serif;
+}
+a {
+  color: #fbfbff;
+}
+a:hover {
+  text-decoration: none;
+  color: #fbfbff;
 }
 .btn1 {
   background-color: #0d0106;

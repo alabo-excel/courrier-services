@@ -20,6 +20,23 @@
         <img src="../static/004.jpg" />
       </carousel>
     </div>
+    <div class="d-lg-flex">
+      <div class="p-5 about w-100"></div>
+      <div class="w-100 p-lg-5 p-3 my-auto">
+        <div class="welcome-text">
+          WELCOME TO QUINTESSENTIAL DELIVERY COMPANY
+        </div>
+        <div class="my-3">
+          In the year 2004, Xenex Delivery Services Logistics established itself
+          as a leading service oriented forwarding company. Xenex Delivery
+          Services has an impressive list of more than 100 renowned clients and
+          these clients have instilled supreme trust in Xenex Delivery Services
+          over the years and we take pride in being associated with them. Our
+          specialization...
+        </div>
+        <div class="btn2 p-3 mt-4">GET IN TOUCH</div>
+      </div>
+    </div>
     <Testimonial />
     <Newsletter />
     <Clients />
@@ -52,12 +69,17 @@ img {
 }
 .overlay-text {
   position: absolute;
-  top: 30%;
+  top: 35%;
   width: 45%;
   left: 10%;
   z-index: 2;
   color: #fbfbff;
   font-size: 45px;
+  font-family: "Rubik", sans-serif;
+}
+.welcome-text {
+  color: #657ed4;
+  font-size: 40px;
   font-family: "Rubik", sans-serif;
 }
 .btn2 {
@@ -66,6 +88,14 @@ img {
   background: #657ed4;
   text-align: center;
   font-family: "Poppins", sans-serif;
+}
+.about {
+  background-image: url("../static/img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
 }
 @media screen and (max-width: 600px) {
   .overlay-text {
