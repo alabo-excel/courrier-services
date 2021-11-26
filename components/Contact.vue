@@ -12,6 +12,75 @@
       </div>
       <img src="../static/005.jpg" />
     </div>
+    <div class="d-lg-flex m-lg-5 px-lg-5">
+      <div class="p-4 m-4 card1">
+        <div class="text-center py-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="#657ed4"
+            class="bi bi-geo-alt"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+            />
+            <path
+              d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+            />
+          </svg>
+        </div>
+        <div>
+          Crestwood Vlg #4 OFFICE 15E, Manchester Township, NJ, 08759.USA Unit
+          <br />
+          <br />
+          5, Peacefield Business Park, Louth Rd, Grimsby, DN36 5YN.uk
+          <br />
+          <br />
+          Box No. 185849,Abu Dhabi.Dhabi
+          <br />
+          <br />
+          1357-4, Hyojadong 3(sam)-ga,Wansan-gu Jeonju-si,Jeollabuk-do.Korea
+        </div>
+      </div>
+      <div class="p-4 border m-4 mx-lg-5">
+        <div class="title">WORKING HOURS</div>
+        <div class="py-3">
+          Pleasure and praising pain was born and will give you a complete
+          happiness.
+        </div>
+        <div class="d-flex justify-content-between">
+          <div>Monday</div>
+          <div>9:00 am – 17.00 pm</div>
+        </div>
+        <hr />
+
+        <div class="d-flex justify-content-between">
+          <div>Tuesday</div>
+          <div>9:00 am – 17.00 pm</div>
+        </div>
+        <hr />
+
+        <div class="d-flex justify-content-between">
+          <div>Wednesday</div>
+          <div>9:00 am – 17.00 pm</div>
+        </div>
+        <hr />
+
+        <div class="d-flex justify-content-between">
+          <div>Thurs $ Friday</div>
+          <div>9:00 am – 17.00 pm</div>
+        </div>
+        <hr />
+
+        <div class="d-flex justify-content-between">
+          <div>Sat & Sunday</div>
+          <div>Closed</div>
+        </div>
+        <hr />
+      </div>
+    </div>
     <div class="d-lg-flex my-5 justify-content-center">
       <a href="tel:5554280940">
         <div class="card1 p-5 m-4 text-center">
@@ -83,6 +152,10 @@ img {
   z-index: 2;
   color: #fbfbff;
   font-size: 35px;
+  font-family: "Rubik", sans-serif;
+}
+.title {
+  font-size: 20px;
   font-family: "Rubik", sans-serif;
 }
 .heading {

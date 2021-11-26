@@ -10,11 +10,11 @@
           </div>
         </div>
       </div>
-      <img src="../static/001.jpg" />
+      <img src="../static/img.jpg" />
     </div>
     <div class="mx-lg-5 px-lg-5">
       <div class="p-4 mx-lg-5">
-        <div class="title py-3">Welcome toExpress Trust Courier Services</div>
+        <div class="title py-3">Welcome to Express Trust Courier Services</div>
         <div>
           Express Trust Courier is one of the World's leading premium express
           delivery companies. We've been delivering for Britain, The US,
@@ -56,7 +56,7 @@
     <div class="d-lg-flex">
       <div class="p-lg-5 p-4 card1">
         <div class="title py-3">Our Mission</div>
-        We meet our customers’ demands for a personal & profesional service by
+        We meet our customer's demands for a personal & profesional service by
         offering innovative supply chain solutions.
       </div>
       <div class="p-lg-5 p-4 card1">

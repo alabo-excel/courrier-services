@@ -138,8 +138,9 @@
 @media screen and (max-width: 600px) {
   .overlay-text {
     font-size: 20px;
-    width: 50%;
+    width: 60%;
     top: 50%;
+    left: 25%;
   }
   .overlay {
     height: 50vh;
