@@ -23,7 +23,9 @@
       </carousel>
     </div>
     <div class="d-lg-flex">
-      <div class="p-5 about w-100"></div>
+      <div class="about w-100">
+        <img src="../static/tank.jpg" alt="">
+      </div>
       <div class="w-100 p-lg-5 p-4 my-auto">
         <div class="welcome-text">
           WELCOME TO QUINTESSENTIAL DELIVERY COMPANY
@@ -102,11 +104,6 @@ a:hover {
   color: #fbfbff;
 }
 .about {
-  background-image: url("../static/tank.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
   height: 100vh;
 }
 @media screen and (max-width: 600px) {
@@ -124,12 +121,11 @@ a:hover {
   .about {
     height: 40vh;
   }
+  .about img{
+    height: 40vh;
+  }
   .welcome-text {
     font-size: 30px;
-  }
-  .about {
-    object-fit: cover;
-    object-position: 60% 0;
   }
 }
 </style>
