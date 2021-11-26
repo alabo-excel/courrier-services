@@ -15,7 +15,7 @@
     <div class="mx-lg-5 p-5">
       <div class="d-lg-flex m-lg-4">
         <div class="w-100">
-          <img class="card-img" src="../static/003.jpg" alt="" />
+          <img class="card-img" src="../static/img.jpg" alt="" />
         </div>
         <div class="w-100 p-lg-5 p-2 card2">
           <div class="mt-lg-5">
@@ -51,7 +51,7 @@
       </div>
       <div class="d-lg-flex m-lg-4">
         <div class="w-100">
-          <img class="card-img" src="../static/003.jpg" alt="" />
+          <img class="card-img" src="../static/warehouse.jpg" alt="" />
         </div>
         <div class="w-100 p-lg-5 p-2 card2">
           <div class="mt-lg-5">

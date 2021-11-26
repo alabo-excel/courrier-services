@@ -4,7 +4,9 @@
       <div class="overlay"></div>
       <div class="overlay-text">
         We offer rapid and flexible delivery to your doorstep
-        <div class="btn2 p-3 mt-3">KNOW MORE</div>
+        <NuxtLink to="/about">
+          <div class="btn2 p-3 mt-3">KNOW MORE</div>
+        </NuxtLink>
       </div>
       <carousel
         :autoplay="true"
@@ -34,7 +36,9 @@
           over the years and we take pride in being associated with them. Our
           specialization...
         </div>
-        <div class="btn2 p-3 mt-4">GET IN TOUCH</div>
+        <NuxtLink to="/contact">
+          <div class="btn2 p-3 mt-4">GET IN TOUCH</div>
+        </NuxtLink>
       </div>
     </div>
     <Testimonial />
@@ -89,8 +93,16 @@ img {
   text-align: center;
   font-family: "Poppins", sans-serif;
 }
+
+a {
+  color: #fbfbff;
+}
+a:hover {
+  text-decoration: none;
+  color: #fbfbff;
+} 
 .about {
-  background-image: url("../static/img.jpg");
+  background-image: url("../static/tank.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -109,11 +121,11 @@ img {
   img {
     height: 55vh;
   }
-  .about{
+  .about {
     height: 40vh;
   }
   .welcome-text {
-  font-size: 30px;
-}
+    font-size: 30px;
+  }
 }
 </style>
