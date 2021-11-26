@@ -10,45 +10,20 @@
     <carousel
       :autoplay="false"
       :nav="false"
-      :items="6"
       :loop="true"
       :dots="false"
       :responsive="{
-        800: { items: 3, nav: false },
-        400: { items: 1, nav: false },
+        0: { items: 1, nav: false },
+        900: { items: 2, nav: false },
+        1200: { items: 3 },
       }"
     >
-      <div class="mx-lg-3 card1 p-5">
+      <div class="mx-lg-3 card1 p-lg-5 p-2">
         In the year 2004, Xenex Delivery Services Logistics has established
         itself as a leading service oriented forwarding company. Xenex Delivery
         Services has an impressive list of more than 100 renowned clients
         <div class="mt-3 name">PRINCE JACOB</div>
       </div>
-      <div class="mx-lg-3 card1 p-5">
-        In the year 2004, Xenex Delivery Services Logistics has established
-        itself as a leading service oriented forwarding company. Xenex Delivery
-        Services has an impressive list of more than 100 renowned clients
-        <div class="mt-3 name">PRINCE JACOB</div>
-      </div>
-      <div class="mx-lg-3 card1 p-5">
-        In the year 2004, Xenex Delivery Services Logistics has established
-        itself as a leading service oriented forwarding company. Xenex Delivery
-        Services has an impressive list of more than 100 renowned clients
-        <div class="mt-3 name">PRINCE JACOB</div>
-      </div>
-      <div class="mx-lg-3 card1 p-5">
-        In the year 2004, Xenex Delivery Services Logistics has established
-        itself as a leading service oriented forwarding company. Xenex Delivery
-        Services has an impressive list of more than 100 renowned clients
-        <div class="mt-3 name">PRINCE JACOB</div>
-      </div>
-      <div class="mx-lg-3 card1 p-5">
-        In the year 2004, Xenex Delivery Services Logistics has established
-        itself as a leading service oriented forwarding company. Xenex Delivery
-        Services has an impressive list of more than 100 renowned clients
-        <div class="mt-3 name">PRINCE JACOB</div>
-      </div>
-
       <template slot="next"><span class="next">&#8594;</span></template>
       <template slot="prev"><span class="prev">&#8592;</span></template>
     </carousel>
@@ -113,7 +88,7 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 40px;
+    font-size: 35px;
   }
   .small-heading {
     font-size: 23px;
@@ -125,6 +100,9 @@ export default {
   }
   .line {
     display: none;
+  }
+  .prev, .next{
+    left: 5px;
   }
 }
 </style>

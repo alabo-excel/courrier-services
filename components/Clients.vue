@@ -10,12 +10,12 @@
     <carousel
       :autoplay="true"
       :nav="false"
-      :items="6"
       :loop="true"
       :dots="false"
       :responsive="{
-        800: { items: 6, nav: false },
-        400: { items: 2, nav: false },
+        0: { items: 2, nav: false },
+        900: { items: 2, nav: false },
+        1200: { items: 6 },
       }"
     >
       <img class="mx-auto" src="../static/05.png" />
@@ -65,7 +65,7 @@ img {
 
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 40px;
+    font-size: 35px;
   }
   .small-heading {
     font-size: 23px;

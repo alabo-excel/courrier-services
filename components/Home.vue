@@ -22,7 +22,7 @@
     </div>
     <div class="d-lg-flex">
       <div class="p-5 about w-100"></div>
-      <div class="w-100 p-lg-5 p-3 my-auto">
+      <div class="w-100 p-lg-5 p-4 my-auto">
         <div class="welcome-text">
           WELCOME TO QUINTESSENTIAL DELIVERY COMPANY
         </div>
@@ -110,7 +110,10 @@ img {
     height: 55vh;
   }
   .about{
-    height: 50vh;
+    height: 40vh;
   }
+  .welcome-text {
+  font-size: 30px;
+}
 }
 </style>
