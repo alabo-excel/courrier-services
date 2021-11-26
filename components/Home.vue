@@ -100,7 +100,7 @@ a {
 a:hover {
   text-decoration: none;
   color: #fbfbff;
-} 
+}
 .about {
   background-image: url("../static/tank.jpg");
   background-repeat: no-repeat;
@@ -126,6 +126,10 @@ a:hover {
   }
   .welcome-text {
     font-size: 30px;
+  }
+  .about {
+    object-fit: cover;
+    object-position: 60% 0;
   }
 }
 </style>

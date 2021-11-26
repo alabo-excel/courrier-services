@@ -16,41 +16,26 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-4">
               <h5 class="footer-head">Quick Links</h5>
               <div class="footer-nav">
-                <NuxtLink class="footer-nav-item" to="/about-us">
+                <NuxtLink class="footer-nav-item" to="/about">
                   About us
                 </NuxtLink>
-                <NuxtLink class="footer-nav-item" to="/faq"> FAQs </NuxtLink>
+                <NuxtLink class="footer-nav-item" to="/about"> FAQs </NuxtLink>
                 <NuxtLink class="footer-nav-item" to="/contact">
                   Contact
                 </NuxtLink>
-                <NuxtLink class="footer-nav-item" to="privacy">
+                <NuxtLink class="footer-nav-item" to="/about">
                   Terms & Privacy
                 </NuxtLink>
-                <!-- <NuxtLink
-                  class="footer-nav-item"
-                  to="/"
-                >
-                  Terms of Service
-                </NuxtLink> -->
-                <!-- <NuxtLink
-                  class="footer-nav-item"
-                  to="/"
-                >
-                  Help and Support
-                </NuxtLink> -->
               </div>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-5">
               <h5 class="footer-head">Explore</h5>
               <div class="footer-nav">
-                <NuxtLink class="footer-nav-item" to="/tutor/info">
+                <NuxtLink class="footer-nav-item" to="/track">
                   Track Shipment
                 </NuxtLink>
-                <NuxtLink class="footer-nav-item" to="/jobs">
+                <NuxtLink class="footer-nav-item" to="/tack">
                   Find Parcel
-                </NuxtLink>
-                <NuxtLink class="footer-nav-item" to="/freelancing">
-                  Hire Rider
                 </NuxtLink>
               </div>
             </div>
