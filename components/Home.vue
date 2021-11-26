@@ -109,5 +109,8 @@ img {
   img {
     height: 55vh;
   }
+  .about{
+    height: 50vh;
+  }
 }
 </style>
