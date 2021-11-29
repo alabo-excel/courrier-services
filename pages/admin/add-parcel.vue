@@ -11,6 +11,7 @@
       <NuxtLink to="/admin">Parcels</NuxtLink>
       <NuxtLink to="/admin/add-parcel">Add Parcels</NuxtLink>
       <NuxtLink to="/admin/add-location">Add Location</NuxtLink>
+      <a href="#" @click="logout">Logout</a>
     </div>
     <div class="w-100 p-4">
       <button class="openbtn" @click="openNav">&#9776;</button>
@@ -65,6 +66,7 @@
   </div>
 </template>
 <script>
+import { mapMutations } from "vuex";
 export default {
   middleware: "authenticated",
   data() {
@@ -76,7 +78,28 @@ export default {
     };
   },
   methods: {
-    submit() {},
+    ...mapMutations(["userLoggedOut"]),
+    submit() {
+      fetch("https://quintessential.herokuapp.com/api", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+            
+          `,
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log(result);
+        });
+    },
+    logout() {
+      this.userLoggedOut();
+      this.$router.push("/login");
+    },
     openNav() {
       document.getElementById("mySidepanel").style.width = "300px";
       document.getElementById("closebtn").style.display = "block";

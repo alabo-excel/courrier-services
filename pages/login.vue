@@ -48,8 +48,8 @@ export default {
         .then((res) => res.json())
         .then((result) => {
           console.log(result.data.login);
-          this.userLoggedIn;
-          // router.push('/admin')
+          this.userLoggedIn();
+          this.$router.push("/admin");
         });
     },
   },
