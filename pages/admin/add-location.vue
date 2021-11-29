@@ -46,7 +46,7 @@
           </div>
           <div class="m-2 w-100">
             <input
-              type="data"
+              type="date"
               class="p-2 border"
               placeholder="Date"
               v-model="date"
@@ -93,7 +93,7 @@ export default {
         body: JSON.stringify({
           query: `
               mutation{
-                addLocation(addParcelInput:{parcelId:"61a521982bab7b0590664247", location:"${this.location}", date: "${this.data}",  time:"${this.time}"}){
+                addLocation(addParcelInput:{parcelId:"${this.parcelId}", location:"${this.location}", date: "${this.date}",  time:"${this.time}"}){
                   parcelName
                   _id
                   locations{

@@ -12,35 +12,23 @@
       </div>
       <img src="../static/img.jpg" />
     </div>
-    <div v-if="parcelId === null">
-      <input type="text" class="p-2 border" />
-      <input type="button" class="p-2 btn3" value="TRACK" />
+    <div v-if="search === false" class="text-center m-5">
+      <input
+        v-model="parcelId"
+        placeholder="Enter Parcel ID"
+        type="text"
+        class="p-2 border"
+      />
+      <input @click="submit" type="button" class="p-2 btn3" value="TRACK" />
     </div>
     <div v-else class="m-lg-5 m-4">
       <ul id="progress">
-        <li>
+        <li v-for="(location, index) in progress" :key="index">
           <div class="node green"></div>
-          <p>The First Thing!</p>
-        </li>
-        <li><div class="divider grey"></div></li>
-        <li>
-          <div class="node grey"></div>
-          <p>The Second Thing!</p>
-        </li>
-        <li><div class="divider grey"></div></li>
-        <li>
-          <div class="node grey"></div>
-          <p>The Third Thing!</p>
-        </li>
-        <li><div class="divider grey"></div></li>
-        <li>
-          <div class="node grey"></div>
-          <p>The Fourth Thing!</p>
-        </li>
-        <li><div class="divider grey"></div></li>
-        <li>
-          <div class="node grey"></div>
-          <p>The Last Thing!</p>
+          <p>{{ location.location }}</p>
+          <ul>
+            <li><div class="divider grey"></div></li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -50,8 +38,38 @@
 export default {
   data() {
     return {
-      parcelId: null,
+      search: false,
+      parcelId: "",
+      progress: null,
     };
+  },
+  methods: {
+    submit() {
+      fetch("https://quintessential.herokuapp.com/api", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE0ZGUxYjNlNGY2YjBiMGZkYWVkYTYiLCJlbWFpbCI6ImFkbWluMTIzQGdtYWlsLmNvbSIsImlhdCI6MTYzODE5NDc5NiwiZXhwIjoxNjQwNzg2Nzk2fQ.rbKpdqwGZaXtnFbk5l_QspTyMOh_hjG8mDe2t53wRBY`,
+        },
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+            query{
+              singleParcel(parcelId: "${this.parcelId}"){
+                locations{
+                  location
+                }
+              }
+            }
+          `,
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log(result.data.singleParcel.locations);
+          this.progress = result.data.singleParcel.locations;
+          this.search = true
+        });
+    },
   },
 };
 </script>

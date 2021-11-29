@@ -15,14 +15,107 @@
       <a href="#" @click="logout">Logout</a>
     </div>
     <div class="w-100 p-4">
-      <button class="openbtn" @click="openNav">&#9776;</button>
+      <div>
+        <button class="openbtn" @click="openNav">&#9776;</button>
+        <b-button class="mx-4 openbtn" v-b-modal.modal-xl
+          >Update parcel</b-button
+        >
+      </div>
+      <b-modal id="modal-xl" size="xl" title="Update Input Parcel">
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Parcel ID"
+              v-model="parcelId"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Parcel Name"
+              v-model="parcelName"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Transport Method"
+              v-model="transportMethod"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Delivery Date"
+              v-model="deliveryDate"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Payment Method"
+              v-model="paymentMethod"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Insurance"
+              v-model="insurance"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Weight"
+              v-model="weight"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Number of Goods "
+              v-model="numberOfGoods"
+            />
+          </div>
+        </div>
+        <div class="w-100">
+          <div class="m-2 w-100">
+            <input
+              type="button"
+              class="p-2 border"
+              value="SUBMIT"
+              @click="updateUser"
+            />
+          </div>
+        </div>
+      </b-modal>
       <div>
         <div class="heading my-4">Parcels</div>
         <div class="d-lg-flex flex-wrap">
-          <div v-for="parcel in parcels" :key="parcel._id" class="w-100 border m-2 p-2">
-           Parcel Name: {{parcel.parcelName}}
-           <div>Receiver Name: {{parcel.receiverInfo.name}}</div>
-            <div>{{parcel._id}}</div>
+          <div
+            v-for="parcel in parcels"
+            :key="parcel._id"
+            class="w-100 border m-2 p-2"
+          >
+            Parcel Name: {{ parcel.parcelName }}
+            <div>Receiver Name: {{ parcel.receiverInfo.name }}</div>
+            <div>{{ parcel._id }}</div>
           </div>
         </div>
       </div>
@@ -37,6 +130,31 @@ export default {
   data() {
     return {
       parcels: null,
+      parcelId: "",
+      parcelName: "",
+      location: "",
+      time: "",
+      date: "",
+      transportMethod: "",
+      deliveryDate: "",
+      paymentMethod: "",
+      insurance: "",
+      weight: "",
+      numberOfGoods: "",
+      sendersName: "",
+      sendersEmail: "",
+      sendersAddress: "",
+      sendersCity: "",
+      sendersCountry: "",
+      sendersPhone: "",
+      sendersPostCode: "",
+      recevicerName: "",
+      recevicerEmail: "",
+      recevicerAddress: "",
+      recevicerCity: "",
+      recevicerCountry: "",
+      recevicerPhone: "",
+      recevicerPostCode: "",
     };
   },
   mounted() {
@@ -63,7 +181,7 @@ export default {
       .then((res) => res.json())
       .then((result) => {
         console.log(result.data.parcels);
-        this.parcels = result.data.parcels
+        this.parcels = result.data.parcels;
       });
   },
   methods: {
@@ -71,6 +189,31 @@ export default {
     logout() {
       this.userLoggedOut();
       this.$router.push("/login");
+    },
+    updateUser() {
+      fetch("https://quintessential.herokuapp.com/api", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE0ZGUxYjNlNGY2YjBiMGZkYWVkYTYiLCJlbWFpbCI6ImFkbWluMTIzQGdtYWlsLmNvbSIsImlhdCI6MTYzODE5NDc5NiwiZXhwIjoxNjQwNzg2Nzk2fQ.rbKpdqwGZaXtnFbk5l_QspTyMOh_hjG8mDe2t53wRBY`,
+        },
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+              mutation{
+                updateParcel(parcelInputUpdate:{parcelId:"${this.parcelId}", parcelName:"${this.parcelName}", transportMethod:"${this.transportMethod}", deliveryDate:"${this.deliveryDate}", paymentMethod:"${this.paymentMethod}", insurance: "${this.insurance}", weight:"${this.weight}", numberOfGoods: ${this.numberOfGoods}, 
+                }){
+                  _id
+                  parcelName
+                  transportMethod
+                }
+              }
+          `,
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log(result);
+        });
     },
     openNav() {
       document.getElementById("mySidepanel").style.width = "300px";
@@ -139,7 +282,7 @@ export default {
 .openbtn:hover {
   background-color: #444;
 }
-.flex-wrap{
+.flex-wrap {
   flex-wrap: wrap;
 }
 @media (max-width: 600px) {
