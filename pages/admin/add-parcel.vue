@@ -53,6 +53,186 @@
             />
           </div>
         </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Transport Method"
+              v-model="transportMethod"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Delivery Data"
+              v-model="deliveryDate"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Payment Method"
+              v-model="paymentMethod"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Insurance"
+              v-model="insurance"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Weight"
+              v-model="weight"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Number of Goods"
+              v-model="numberOfGoods"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Name"
+              v-model="sendersName"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Email"
+              v-model="sendersEmail"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Address"
+              v-model="sendersAddress"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders City"
+              v-model="sendersCity"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Country"
+              v-model="sendersCountry"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Phone"
+              v-model="sendersPhone"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Post Code"
+              v-model="sendersPostCode"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Name"
+              v-model="receiverName"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Email"
+              v-model="receiverEmail"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Address"
+              v-model="receiverAddress"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers City"
+              v-model="receiverCity"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers County"
+              v-model="receiverCountry"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Phone"
+              v-model="receiverPhone"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Post Code"
+              v-model="recevicerPostCode"
+            />
+          </div>
+        </div>
         <div>
           <input
             @click="submit"
@@ -75,6 +255,26 @@ export default {
       location: "",
       time: "",
       date: "",
+      transportMethod: "",
+      deliveryDate: "",
+      paymentMethod: "",
+      insurance: "",
+      weight: "",
+      numberOfGoods: "",
+      sendersName: "",
+      sendersEmail: "",
+      sendersAddress: "",
+      sendersCity: "",
+      sendersCountry: "",
+      sendersPhone: "",
+      sendersPostCode: "",
+      recevicerName: "",
+      recevicerEmail: "",
+      recevicerAddress: "",
+      recevicerCity: "",
+      recevicerCountry: "",
+      recevicerPhone: "",
+      recevicerPostCode: ""
     };
   },
   methods: {
@@ -177,6 +377,7 @@ input {
 @media (max-width: 600px) {
   .sidepanel {
     width: 0px;
+    /* position: fixed; */
   }
   .sidepanel .closebtn {
     display: none;
