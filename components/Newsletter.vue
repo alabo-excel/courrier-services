@@ -60,7 +60,8 @@ input {
     font-size: 20px;
   }
   input {
-    width: 95% !important;
+    width: 100% !important;
+    border-radius: 0px;
   }
   .form {
     left: 3%;

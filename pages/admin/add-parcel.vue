@@ -1,0 +1,111 @@
+<template>
+  <div class="d-flex">
+    <div id="mySidepanel" class="sidepanel">
+      <a
+        href="javascript:void(0)"
+        class="closebtn"
+        id="closebtn"
+        @click="closeNav"
+        >&times;</a
+      >
+      <NuxtLink to="/admin">Parcels</NuxtLink>
+      <NuxtLink to="/admin/add-parcel">Add Parcels</NuxtLink>
+      <NuxtLink to="/admin/add-location">Add Location</NuxtLink>
+    </div>
+    <div class="w-100 p-4">
+      <button class="openbtn" @click="openNav">&#9776;</button>
+      <div>
+        <div class="heading my-4">Add Parcels</div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      parcels: null,
+    };
+  },
+  methods: {
+    openNav() {
+      document.getElementById("mySidepanel").style.width = "300px";
+      document.getElementById("closebtn").style.display = "block";
+    },
+    /* Set the width of the sidebar to 0 (hide it) */
+    closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+      document.getElementById("closebtn").style.display = "none";
+    },
+  },
+};
+</script>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@900&display=swap");
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 100vh; /* Specify a height */
+  width: 300px; /* 0 width - change this with JavaScript */
+  z-index: 1; /* Stay on top */
+  background-color: #0d0106;
+  color: #fbfbff;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+    color: #fbfbff;
+}
+.heading {
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #0d0106;
+  color: #fbfbff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+@media (max-width: 600px) {
+  .sidepanel {
+    width: 0px;
+  }
+  .sidepanel .closebtn {
+    display: none;
+  }
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    font-size: 15px;
+  }
+}
+</style>

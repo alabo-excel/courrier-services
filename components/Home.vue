@@ -44,6 +44,7 @@
       </div>
     </div>
     <Testimonial />
+    <Mission />
     <Newsletter />
     <Clients />
   </div>

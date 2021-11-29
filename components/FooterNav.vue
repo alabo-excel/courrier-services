@@ -43,9 +43,8 @@
               <h5 class="footer-head">Contact Us</h5>
               <p class="footer-email">info@QuintEssential.io</p>
               <p class="footer-phone">
-                +234 901 601 6563
+                +1682 337 1942
                 <br />
-                +234 814 759 8640
               </p>
             </div>
           </div>

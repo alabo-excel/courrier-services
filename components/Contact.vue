@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="d-lg-flex my-5 justify-content-center">
-      <a href="tel:5554280940">
+      <a href="tel:+16823371942">
         <div class="card1 p-5 m-4 text-center">
           <div class="py-2">
             <svg
@@ -99,7 +99,7 @@
               <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
             </svg>
           </div>
-          +234 901 601 6563
+          +1682 337 1942
         </div>
       </a>
       <a href="mailto:name1@mail.com">
