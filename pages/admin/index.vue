@@ -17,10 +17,169 @@
     <div class="w-100 p-4">
       <div>
         <button class="openbtn" @click="openNav">&#9776;</button>
-        <b-button class="mx-4 openbtn" v-b-modal.modal-xl
+        <b-button class="mx-4 openbtn2" v-b-modal.modal-xl
           >Update parcel</b-button
         >
+        <b-button class="mx-4 openbtn2" v-b-modal.modal
+          >Update Sender and Receiver Info</b-button
+        >
       </div>
+      <!-- Update Sender and Receiver Information start -->
+      <b-modal
+        id="modal"
+        size="xl"
+        title="Update Sender and Receiver Information"
+      >
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Parcel ID"
+              v-model="parcelId"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Name"
+              v-model="sendersName"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Email"
+              v-model="sendersEmail"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Address"
+              v-model="sendersAddress"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="senders City"
+              v-model="sendersCity"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders County"
+              v-model="sendersCountry"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Phone"
+              v-model="sendersPhone"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Senders Post Code"
+              v-model="sendersPostCode"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Name"
+              v-model="recevicerName"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Email"
+              v-model="recevicerEmail"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Address"
+              v-model="recevicerAddress"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers City"
+              v-model="recevicerCity"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Country"
+              v-model="recevicerCountry"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receivers Phone Number"
+              v-model="recevicerPhone"
+            />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Receiver Post Code"
+              v-model="recevicerPostCode"
+            />
+          </div>
+        </div>
+        <div class="w-100">
+          <div class="m-2 w-100">
+            <input
+              type="button"
+              class="p-2 openbtn2"
+              value="SUBMIT"
+              @click="updateInfo"
+            />
+          </div>
+        </div>
+      </b-modal>
+      <!-- Update Sender and Receiver Information end -->
+      <!-- Update parcel start -->
+
       <b-modal id="modal-xl" size="xl" title="Update Input Parcel">
         <div class="d-lg-flex w-100">
           <div class="m-2 w-100">
@@ -98,13 +257,15 @@
           <div class="m-2 w-100">
             <input
               type="button"
-              class="p-2 border"
+              class="p-2 openbtn2"
               value="SUBMIT"
               @click="updateUser"
             />
           </div>
         </div>
       </b-modal>
+      <!-- Update parcel end -->
+
       <div>
         <div class="heading my-4">Parcels</div>
         <div class="d-lg-flex flex-wrap">
@@ -215,6 +376,37 @@ export default {
           console.log(result);
         });
     },
+    updateInfo() {
+      fetch("https://quintessential.herokuapp.com/api", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE0ZGUxYjNlNGY2YjBiMGZkYWVkYTYiLCJlbWFpbCI6ImFkbWluMTIzQGdtYWlsLmNvbSIsImlhdCI6MTYzODE5NDc5NiwiZXhwIjoxNjQwNzg2Nzk2fQ.rbKpdqwGZaXtnFbk5l_QspTyMOh_hjG8mDe2t53wRBY`,
+        },
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+            mutation{
+              updateSenderAndRecevicerInfo(updateSenderAndRecevicerInfo:{parcelId:"${this.parcelId}", sendersName:"${this.sendersName}", sendersEmail:"${this.sendersEmail}", sendersAddress:"${this.sendersAddress}", sendersCity:"${this.sendersCity}", sendersCountry:"${this.sendersCountry}", sendersPhone:"${this.sendersPhone}", sendersPostCode:"${this.sendersPostCode}", recevicerName: "${this.recevicerName}", recevicerEmail:"${this.recevicerEmail}", recevicerAddress:"${this.recevicerAddress}", recevicerCity:"${this.recevicerCity}", recevicerCountry:"${this.recevicerCountry}", recevicerPhone:"${this.recevicerPhone}", recevicerPostCode:"${this.recevicerPostCode}", }){
+                parcelName
+                receiverInfo{
+                  name
+                  email
+                }
+                receiverInfo{
+                  name
+                  email
+                }
+                _id
+              }
+            }
+          `,
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log(result);
+        });
+    },
     openNav() {
       document.getElementById("mySidepanel").style.width = "300px";
       document.getElementById("closebtn").style.display = "block";
@@ -272,6 +464,14 @@ export default {
 /* Style the button that is used to open the sidepanel */
 .openbtn {
   font-size: 20px;
+  cursor: pointer;
+  background-color: #0d0106;
+  color: #fbfbff;
+  padding: 10px 15px;
+  border: none;
+}
+.openbtn2 {
+  font-size: 14px;
   cursor: pointer;
   background-color: #0d0106;
   color: #fbfbff;
