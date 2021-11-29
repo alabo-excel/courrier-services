@@ -14,10 +14,10 @@
     </div>
     <div class="mx-lg-5 px-lg-5">
       <div class="p-4 mx-lg-5">
-        <div class="title py-3">Welcome to Express Trust Courier Services</div>
+        <div class="title py-3">Welcome to QuintEssential Delivery Company</div>
         <div>
-          Express Trust Courier is one of the World's leading premium express
-          delivery companies. We've been delivering for Britain, The US,
+          Quintessential delivery company is one of the World's leading premium
+          Quintessential delivery company. We've been delivering for Britain, The US,
           Afghanistan and all of The middle East for over years, and we
           successfully deliver many parcels a year worldwide. Whilst we are a
           nationwide company, we take great pride in being able to offer a
@@ -31,25 +31,26 @@
           caged network. We take care of your parcels by placing them in our
           caged network during transit. By reducing the number of times we
           physically handle them, we minimise damages. Corporate Responsibility
-          AtExpress Trust Courier Courier we take our responsibility to do
-          what’s right for Customers and Colleagues very seriously.
-          Procurement:Express Trust Courier Courier ensures that best value is
-          derived from all purchases whilstdelivery-service-signature minimising
-          risk and ensuring the highest United s from all selected suppliers.
-          Written policies and procedures are consistently in place. AtExpress
-          Trust Courier , we really are committed to our customers. Teamwork is
-          key both internally within our own business and externally by working
-          in true partnership with our customers. We operate at the premium end
-          of the parcels market, and do everything we can to satisfy the needs
-          of our customers. That means being reliable, being available, and in
-          the event that things go wrong, being willing to go the extra mile to
-          resolve the issue. With great management our progress over the years
-          has been a successive rise, We've kept the records straight as our
-          clientele base spanned across the globe. We've maintain a concrete
-          security system, to ensure the safety of parcels Our mission is to
-          provide trouble free courier service on a consistent basis. We show
-          care and respect for each other and we show care and respect for each
-          package we handle. We are dedicated to our customer’s success..
+          At Quintessential delivery company Courier we take our responsibility
+          to do what’s right for Customers and Colleagues very seriously.
+          Procurement. Quintessential delivery company Courier ensures that best
+          value is derived from all purchases whilstdelivery-service-signature
+          minimising risk and ensuring the highest United s from all selected
+          suppliers. Written policies and procedures are consistently in place.
+          At Quintessential delivery company, we really are committed to our
+          customers. Teamwork is key both internally within our own business and
+          externally by working in true partnership with our customers. We
+          operate at the premium end of the parcels market, and do everything we
+          can to satisfy the needs of our customers. That means being reliable,
+          being available, and in the event that things go wrong, being willing
+          to go the extra mile to resolve the issue. With great management our
+          progress over the years has been a successive rise, We've kept the
+          records straight as our clientele base spanned across the globe. We've
+          maintain a concrete security system, to ensure the safety of parcels
+          Our mission is to provide trouble free courier service on a consistent
+          basis. We show care and respect for each other and we show care and
+          respect for each package we handle. We are dedicated to our customer’s
+          success..
         </div>
       </div>
     </div>

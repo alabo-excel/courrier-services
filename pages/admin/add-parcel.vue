@@ -16,6 +16,25 @@
       <button class="openbtn" @click="openNav">&#9776;</button>
       <div>
         <div class="heading my-4">Add Parcels</div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input type="text" class="p-2 border" placeholder="Parcel Name" v-model="parcelName" />
+          </div>
+          <div class="m-2 w-100">
+            <input type="text" class="p-2 border" placeholder="Location" v-model="location" />
+          </div>
+        </div>
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input type="text" class="p-2 border" placeholder="Time"  v-model="time" />
+          </div>
+          <div class="m-2 w-100">
+            <input type="text" class="p-2 border" placeholder="Date" v-model="date" />
+          </div>
+        </div>
+        <div>
+          <input @click="submit" type="button" value="SUBMIT" class="p-2 m-2 btn3" />
+        </div>
       </div>
     </div>
   </div>
@@ -24,10 +43,16 @@
 export default {
   data() {
     return {
-      parcels: null,
+      parcelName: "",
+      location: "",
+      time: "",
+      date: "",
     };
   },
   methods: {
+    submit(){
+
+    },
     openNav() {
       document.getElementById("mySidepanel").style.width = "300px";
       document.getElementById("closebtn").style.display = "block";
@@ -62,7 +87,11 @@ export default {
   font-size: 25px;
   display: block;
   transition: 0.3s;
-    color: #fbfbff;
+  color: #fbfbff;
+}
+.btn3 {
+  background-color: #0d0106;
+  color: #fbfbff;
 }
 .heading {
   font-size: 30px;
@@ -92,7 +121,9 @@ export default {
   padding: 10px 15px;
   border: none;
 }
-
+input {
+  width: 100%;
+}
 .openbtn:hover {
   background-color: #444;
 }

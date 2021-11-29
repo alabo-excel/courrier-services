@@ -19,10 +19,28 @@
       }"
     >
       <div class="mx-lg-3 card1 p-lg-5 p-2">
-        In the year 2004, Xenex Delivery Services Logistics has established
-        itself as a leading service oriented forwarding company. Xenex Delivery
-        Services has an impressive list of more than 100 renowned clients
-        <div class="mt-3 name">PRINCE JACOB</div>
+        Thanks so much! My delivery was great and delivery was super fast too!
+        <div class="mt-3 name">-Abigail King</div>
+      </div>
+      <div class="mx-lg-3 card1 p-lg-5 p-2">
+        Thanks Quintessential delievery company your delivery are amazing and
+        your service is wonderful.
+        <div class="mt-3 name">-Grace Young</div>
+      </div>
+      <div class="mx-lg-3 card1 p-lg-5 p-2">
+        Thanks Quintessential delievery company your delivery are amazing and
+        your service is wonderful.
+        <div class="mt-3 name">-Emma Williams</div>
+      </div>
+      <div class="mx-lg-3 card1 p-lg-5 p-2">
+        my delivery has just arrived. It is soooo beautiful. Thank you for
+        sending it so quickly. Looking forward now to the other stuff I ordered!
+        <div class="mt-3 name">-Eliana Moore</div>
+      </div>
+      <div class="mx-lg-3 card1 p-lg-5 p-2">
+        The delivery arrived in a timely manner in perfect condition. I
+        appreciated your personal note too.
+        <div class="mt-3 name">-Sofia Torres</div>
       </div>
       <template slot="next"><span class="next">&#8594;</span></template>
       <template slot="prev"><span class="prev">&#8592;</span></template>
@@ -101,7 +119,8 @@ export default {
   .line {
     display: none;
   }
-  .prev, .next{
+  .prev,
+  .next {
     left: 5px;
   }
 }

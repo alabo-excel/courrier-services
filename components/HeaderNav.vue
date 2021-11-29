@@ -20,8 +20,9 @@
           <NuxtLink to="/contact">
             <div class="p-2">Contact Us</div>
           </NuxtLink>
-          <!-- <NuxtLink to="/"></NuxtLink> -->
-          <div class="p-2 px-4 btn1">Track</div>
+          <NuxtLink to="/track">
+          <div class="p-2 px-4 btn1">Track</div>          
+          </NuxtLink>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

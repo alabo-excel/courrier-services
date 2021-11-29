@@ -24,19 +24,19 @@
     </div>
     <div class="d-lg-flex">
       <div class="about w-100">
-        <img src="../static/tank.jpg" alt="">
+        <img src="../static/tank.jpg" alt="" />
       </div>
       <div class="w-100 p-lg-5 p-4 my-auto">
         <div class="welcome-text">
           WELCOME TO QUINTESSENTIAL DELIVERY COMPANY
         </div>
         <div class="my-3">
-          In the year 2004, Xenex Delivery Services Logistics established itself
-          as a leading service oriented forwarding company. Xenex Delivery
-          Services has an impressive list of more than 100 renowned clients and
-          these clients have instilled supreme trust in Xenex Delivery Services
-          over the years and we take pride in being associated with them. Our
-          specialization...
+          In the year 2004, Quintessential Delivery Services company established
+          itself as a leading service oriented forwarding company.
+          Quintessential Delivery Company has an impressive list of more than
+          100 renowned clients and these clients have instilled supreme trust in
+          Quintessential Delivery Company over the years and we take pride in
+          being associated with them. Our specialization...
         </div>
         <NuxtLink to="/contact">
           <div class="btn2 p-3 mt-4">GET IN TOUCH</div>
@@ -122,7 +122,7 @@ a:hover {
   .about {
     height: 40vh;
   }
-  .about img{
+  .about img {
     height: 40vh;
   }
   .welcome-text {

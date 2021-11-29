@@ -5,9 +5,9 @@
         <div class="col-12 col-lg-3">
           <div></div>
           <p class="footer-text">
-            In the year 2004, Xenex Delivery Services Logistics has established
-            itself as a leading service oriented forwarding company. Xenex
-            Delivery Services has an impressive list of more than 100 renowned
+            In the year 2004, quintessential Delivery Compny has established
+            itself as a leading service oriented forwarding company. quintessential
+            Delivery company has an impressive list of more than 100 renowned
             clients...
           </p>
         </div>
