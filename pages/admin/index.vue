@@ -25,7 +25,6 @@
 
 <script>
 import { mapMutations } from "vuex";
-
 export default {
   middleware: "authenticated",
   data() {

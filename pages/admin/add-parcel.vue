@@ -46,7 +46,7 @@
           </div>
           <div class="m-2 w-100">
             <input
-              type="text"
+              type="data"
               class="p-2 border"
               placeholder="Date"
               v-model="date"
@@ -175,7 +175,7 @@
               type="text"
               class="p-2 border"
               placeholder="Receivers Name"
-              v-model="receiverName"
+              v-model="recevicerName"
             />
           </div>
         </div>
@@ -185,7 +185,7 @@
               type="text"
               class="p-2 border"
               placeholder="Receivers Email"
-              v-model="receiverEmail"
+              v-model="recevicerEmail"
             />
           </div>
           <div class="m-2 w-100">
@@ -193,7 +193,7 @@
               type="text"
               class="p-2 border"
               placeholder="Receivers Address"
-              v-model="receiverAddress"
+              v-model="recevicerAddress"
             />
           </div>
         </div>
@@ -203,7 +203,7 @@
               type="text"
               class="p-2 border"
               placeholder="Receivers City"
-              v-model="receiverCity"
+              v-model="recevicerCity"
             />
           </div>
           <div class="m-2 w-100">
@@ -211,7 +211,7 @@
               type="text"
               class="p-2 border"
               placeholder="Receivers County"
-              v-model="receiverCountry"
+              v-model="recevicerCountry"
             />
           </div>
         </div>
@@ -221,7 +221,7 @@
               type="text"
               class="p-2 border"
               placeholder="Receivers Phone"
-              v-model="receiverPhone"
+              v-model="recevicerPhone"
             />
           </div>
           <div class="m-2 w-100">
@@ -287,7 +287,41 @@ export default {
         method: "POST",
         body: JSON.stringify({
           query: `
-            
+            mutation{
+              addParcel(parcelInput:{parcelName:"${this.parcelName}", location:"${this.location}", date:"${this.date}", time:"${this.time}", transportMethod:"${this.transportMethod}", deliveryDate:"${this.deliveryDate}", paymentMethod:"${thsi.paymentMethod}", insurance:"${this.insurance}", weight:"${this.weight}", numberOfGoods: ${this.numberOfGoods}, sendersName:"${this.sendersName}", sendersEmail:"${this.sendersEmail}", sendersAddress:"${this.sendersAddress}", sendersCity:"${this.sendersCity}", sendersCountry:"${this.sendersCountry}", sendersPhone:"${this.sendersPhone}", sendersPostCode:"${this.sendersPostCode}", recevicerName:"${this.recevicerName}", recevicerEmail:"${this.recevicerEmail}",  recevicerAddress:"${this.recevicerAddress}", recevicerCity:"${this.recevicerCity}", recevicerCountry:"${this.recevicerCountry}", recevicerPhone:"${this.recevicerPhone}", recevicerPostCode:"${this.recevicerPostCode}", }){
+                parcelName
+                transportMethod
+                delive	ryDate
+                paymentMethod
+                insurance
+                weight
+                numberOfGoods
+                locations {
+                  location
+                  date
+                  time
+                }
+                senderInfo{
+                  name
+                  email
+                  address
+                  city
+                  country
+                  phone
+                  postCode 
+                }
+                receiverInfo{
+                  name
+                  email
+                  address
+                  city
+                  country
+                  phone
+                  postCode
+                }
+                isDelivered
+              }
+            }
           `,
         }),
       })
