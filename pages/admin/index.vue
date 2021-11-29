@@ -17,10 +17,10 @@
     <div class="w-100 p-4">
       <div>
         <button class="openbtn" @click="openNav">&#9776;</button>
-        <b-button class="mx-4 openbtn2" v-b-modal.modal-xl
+        <b-button class="m-lg-4 m-2 openbtn2" v-b-modal.modal-xl
           >Update parcel</b-button
         >
-        <b-button class="mx-4 openbtn2" v-b-modal.modal
+        <b-button class="m-lg-4 m-2 openbtn2" v-b-modal.modal
           >Update Sender and Receiver Info</b-button
         >
       </div>

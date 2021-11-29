@@ -64,9 +64,9 @@
           </div>
           <div class="m-2 w-100">
             <input
-              type="text"
+              type="date"
               class="p-2 border"
-              placeholder="Delivery Data"
+              placeholder="Delivery Date"
               v-model="deliveryDate"
             />
           </div>

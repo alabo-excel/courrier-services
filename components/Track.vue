@@ -22,6 +22,7 @@
       <input @click="submit" type="button" class="p-2 btn3" value="TRACK" />
     </div>
     <div v-else class="m-lg-5 m-4">
+    <h2 class="py-4">Recent port and destination</h2>
       <ul id="progress">
         <li v-for="(location, index) in progress" :key="index">
           <div class="node green"></div>
