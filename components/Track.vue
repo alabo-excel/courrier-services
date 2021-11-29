@@ -12,7 +12,11 @@
       </div>
       <img src="../static/img.jpg" />
     </div>
-    <div class="m-lg-5 m-4">
+    <div v-if="parcelId === null">
+      <input type="text" class="p-2 border" />
+      <input type="button" class="p-2 btn3" value="TRACK" />
+    </div>
+    <div v-else class="m-lg-5 m-4">
       <ul id="progress">
         <li>
           <div class="node green"></div>
@@ -42,7 +46,15 @@
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      parcelId: null,
+    };
+  },
+};
+</script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@900&display=swap");
 img {
@@ -113,7 +125,8 @@ li p {
 
 li {
   list-style: none;
-  line-height: 1px;}
+  line-height: 1px;
+}
 
 .blue {
   background-color: rgba(82, 165, 255, 1);
@@ -148,6 +161,10 @@ li {
 .inner-caption {
   position: absolute;
   top: 20%;
+}
+.btn3 {
+  background-color: #0d0106;
+  color: #fbfbff;
 }
 @media screen and (max-width: 600px) {
   .overlay-text {

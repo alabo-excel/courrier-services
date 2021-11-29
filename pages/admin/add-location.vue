@@ -17,13 +17,23 @@
       <button class="openbtn" @click="openNav">&#9776;</button>
       <div>
         <div class="heading my-4">Add Location</div>
-        <div class="m-2 w-100">
-          <input
-            type="text"
-            class="p-2 border"
-            placeholder="Location"
-            v-model="location"
-          />
+        <div class="d-lg-flex w-100">
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Parcel Id"
+              v-model="parcelId"
+            />
+          </div>
+          <div class="m-2 w-100">
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Location"
+              v-model="location"
+            />
+          </div>
         </div>
         <div class="d-lg-flex w-100">
           <div class="m-2 w-100">
@@ -36,7 +46,7 @@
           </div>
           <div class="m-2 w-100">
             <input
-              type="text"
+              type="data"
               class="p-2 border"
               placeholder="Date"
               v-model="date"
@@ -61,6 +71,7 @@ export default {
   middleware: "authenticated",
   data() {
     return {
+      parcelId: "",
       location: "",
       time: "",
       date: "",
@@ -72,7 +83,32 @@ export default {
       this.userLoggedOut();
       this.$router.push("/login");
     },
-    submit() {},
+    submit() {
+      fetch("https://quintessential.herokuapp.com/api", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE0ZGUxYjNlNGY2YjBiMGZkYWVkYTYiLCJlbWFpbCI6ImFkbWluMTIzQGdtYWlsLmNvbSIsImlhdCI6MTYzODE5NDc5NiwiZXhwIjoxNjQwNzg2Nzk2fQ.rbKpdqwGZaXtnFbk5l_QspTyMOh_hjG8mDe2t53wRBY`,
+        },
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+              mutation{
+                addLocation(addParcelInput:{parcelId:"61a521982bab7b0590664247", location:"${this.location}", date: "${this.data}",  time:"${this.time}"}){
+                  parcelName
+                  _id
+                  locations{
+                    location
+                  }
+                }
+              }
+          `,
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log(result);
+        });
+    },
     openNav() {
       document.getElementById("mySidepanel").style.width = "300px";
       document.getElementById("closebtn").style.display = "block";

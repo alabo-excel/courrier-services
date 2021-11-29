@@ -18,6 +18,13 @@
       <button class="openbtn" @click="openNav">&#9776;</button>
       <div>
         <div class="heading my-4">Parcels</div>
+        <div class="d-lg-flex flex-wrap">
+          <div v-for="parcel in parcels" :key="parcel._id" class="w-100 border m-2 p-2">
+           Parcel Name: {{parcel.parcelName}}
+           <div>Receiver Name: {{parcel.receiverInfo.name}}</div>
+            <div>{{parcel._id}}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -31,6 +38,33 @@ export default {
     return {
       parcels: null,
     };
+  },
+  mounted() {
+    fetch("https://quintessential.herokuapp.com/api", {
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE0ZGUxYjNlNGY2YjBiMGZkYWVkYTYiLCJlbWFpbCI6ImFkbWluMTIzQGdtYWlsLmNvbSIsImlhdCI6MTYzODE5NDc5NiwiZXhwIjoxNjQwNzg2Nzk2fQ.rbKpdqwGZaXtnFbk5l_QspTyMOh_hjG8mDe2t53wRBY`,
+      },
+      method: "POST",
+      body: JSON.stringify({
+        query: `
+              query{
+                parcels{
+                  parcelName
+                  _id
+                      receiverInfo{
+                        name
+                      }
+                }
+              }
+          `,
+      }),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result.data.parcels);
+        this.parcels = result.data.parcels
+      });
   },
   methods: {
     ...mapMutations(["userLoggedOut"]),
@@ -104,6 +138,9 @@ export default {
 
 .openbtn:hover {
   background-color: #444;
+}
+.flex-wrap{
+  flex-wrap: wrap;
 }
 @media (max-width: 600px) {
   .sidepanel {

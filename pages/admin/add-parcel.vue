@@ -274,7 +274,7 @@ export default {
       recevicerCity: "",
       recevicerCountry: "",
       recevicerPhone: "",
-      recevicerPostCode: ""
+      recevicerPostCode: "",
     };
   },
   methods: {
@@ -283,7 +283,9 @@ export default {
       fetch("https://quintessential.herokuapp.com/api", {
         headers: {
           "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer ${token}`,
         },
+
         method: "POST",
         body: JSON.stringify({
           query: `
