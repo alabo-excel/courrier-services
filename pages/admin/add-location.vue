@@ -17,18 +17,38 @@
       <div>
         <div class="heading my-4">Add Location</div>
         <div class="m-2 w-100">
-          <input type="text" class="p-2 border" placeholder="Location" v-model="location" />
+          <input
+            type="text"
+            class="p-2 border"
+            placeholder="Location"
+            v-model="location"
+          />
         </div>
         <div class="d-lg-flex w-100">
           <div class="m-2 w-100">
-            <input type="text" class="p-2 border" placeholder="Time" v-model="time" />
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Time"
+              v-model="time"
+            />
           </div>
           <div class="m-2 w-100">
-            <input type="text" class="p-2 border" placeholder="Date" v-model="date" />
+            <input
+              type="text"
+              class="p-2 border"
+              placeholder="Date"
+              v-model="date"
+            />
           </div>
         </div>
         <div>
-          <input @click="submit" type="button" value="SUBMIT" class="p-2 m-2 btn3" />
+          <input
+            @click="submit"
+            type="button"
+            value="SUBMIT"
+            class="p-2 m-2 btn3"
+          />
         </div>
       </div>
     </div>
@@ -36,16 +56,16 @@
 </template>
 <script>
 export default {
+  middleware: "authenticated",
   data() {
     return {
       location: "",
       time: "",
-      date: "",    };
+      date: "",
+    };
   },
   methods: {
-    submit(){
-
-    },
+    submit() {},
     openNav() {
       document.getElementById("mySidepanel").style.width = "300px";
       document.getElementById("closebtn").style.display = "block";

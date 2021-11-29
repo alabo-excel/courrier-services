@@ -6,19 +6,55 @@
         type="text"
         class="p-2 border my-2"
         placeholder="Enter your  Email Address"
+        v-model="email"
       />
       <input
         type="password"
         class="p-2 border my-2"
         placeholder="Enter your Password"
+        v-model="password"
       />
-      <NuxtLink to="/admin">
-        <input type="button" class="p-2 btn3 my-2" value="LOGIN" />
-      </NuxtLink>
+      <input @click="login" type="button" class="p-2 btn3 my-2" value="LOGIN" />
     </div>
   </div>
 </template>
-
+<script>
+import { mapMutations } from "vuex";
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    ...mapMutations(["userLoggedIn"]),
+    login() {
+      fetch("https://quintessential.herokuapp.com/api", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+             query{
+              login(email: "${this.email}", password: "${this.password}"){
+                token
+              }
+            }
+          `,
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log(result.data.login);
+          this.userLoggedIn;
+          // router.push('/admin')
+        });
+    },
+  },
+};
+</script>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@900&display=swap");
 
