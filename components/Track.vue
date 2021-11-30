@@ -292,7 +292,7 @@ li p {
   display: inline-block;
   font-family: "Poppins";
   margin-left: 25px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 li {
@@ -335,7 +335,9 @@ span {
   background-color: #0d0106;
   color: #fbfbff;
 }
-h6 {
+h6,
+h4 {
+  font-family: "Rubik", sans-serif;
   font-weight: 700;
 }
 .icons {
