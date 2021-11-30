@@ -290,10 +290,10 @@ export default {
         body: JSON.stringify({
           query: `
             mutation{
-              addParcel(parcelInput:{parcelName:"${this.parcelName}", location:"${this.location}", date:"${this.date}", time:"${this.time}", transportMethod:"${this.transportMethod}", deliveryDate:"${this.deliveryDate}", paymentMethod:"${thsi.paymentMethod}", insurance:"${this.insurance}", weight:"${this.weight}", numberOfGoods: ${this.numberOfGoods}, sendersName:"${this.sendersName}", sendersEmail:"${this.sendersEmail}", sendersAddress:"${this.sendersAddress}", sendersCity:"${this.sendersCity}", sendersCountry:"${this.sendersCountry}", sendersPhone:"${this.sendersPhone}", sendersPostCode:"${this.sendersPostCode}", recevicerName:"${this.recevicerName}", recevicerEmail:"${this.recevicerEmail}",  recevicerAddress:"${this.recevicerAddress}", recevicerCity:"${this.recevicerCity}", recevicerCountry:"${this.recevicerCountry}", recevicerPhone:"${this.recevicerPhone}", recevicerPostCode:"${this.recevicerPostCode}", }){
+              addParcel(parcelInput:{parcelName:"${this.parcelName}", location:"${this.location}", date:"${this.date}", time:"${this.time}", transportMethod:"${this.transportMethod}", deliveryDate:"${this.deliveryDate}", paymentMethod:"${this.paymentMethod}", insurance:"${this.insurance}", weight:"${this.weight}", numberOfGoods: ${this.numberOfGoods}, sendersName:"${this.sendersName}", sendersEmail:"${this.sendersEmail}", sendersAddress:"${this.sendersAddress}", sendersCity:"${this.sendersCity}", sendersCountry:"${this.sendersCountry}", sendersPhone:"${this.sendersPhone}", sendersPostCode:"${this.sendersPostCode}", recevicerName:"${this.recevicerName}", recevicerEmail:"${this.recevicerEmail}",  recevicerAddress:"${this.recevicerAddress}", recevicerCity:"${this.recevicerCity}", recevicerCountry:"${this.recevicerCountry}", recevicerPhone:"${this.recevicerPhone}", recevicerPostCode:"${this.recevicerPostCode}", }){
                 parcelName
                 transportMethod
-                delive	ryDate
+                deliveryDate
                 paymentMethod
                 insurance
                 weight
@@ -329,7 +329,7 @@ export default {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
+          // console.log(result);
           this.$router.push("/admin");
         });
     },

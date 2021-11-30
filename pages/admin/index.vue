@@ -17,16 +17,16 @@
     <div class="w-100 p-4">
       <div>
         <button class="openbtn" @click="openNav">&#9776;</button>
-        <b-button class="m-lg-4 m-2 openbtn2" v-b-modal.modal-xl
+        <b-button class="m-lg-4 m-2 openbtn2" @click="modalShow = !modalShow"
           >Update parcel</b-button
         >
-        <b-button class="m-lg-4 m-2 openbtn2" v-b-modal.modal
+        <b-button class="m-lg-4 m-2 openbtn2" @click="modalShow2 = !modalShow2"
           >Update Sender and Receiver Info</b-button
         >
       </div>
       <!-- Update Sender and Receiver Information start -->
       <b-modal
-        id="modal"
+        v-model="modalShow2"
         size="xl"
         title="Update Sender and Receiver Information"
       >
@@ -178,9 +178,9 @@
         </div>
       </b-modal>
       <!-- Update Sender and Receiver Information end -->
-      <!-- Update parcel start -->
 
-      <b-modal id="modal-xl" size="xl" title="Update Input Parcel">
+      <!-- Update parcel start -->
+      <b-modal v-model="modalShow" size="xl" title="Update Input Parcel">
         <div class="d-lg-flex w-100">
           <div class="m-2 w-100">
             <input
@@ -210,7 +210,7 @@
           </div>
           <div class="m-2 w-100">
             <input
-              type="text"
+              type="date"
               class="p-2 border"
               placeholder="Delivery Date"
               v-model="deliveryDate"
@@ -290,6 +290,9 @@ export default {
   middleware: "authenticated",
   data() {
     return {
+      modalShow: false,
+      modalShow2: false,
+
       parcels: null,
       parcelId: "",
       parcelName: "",
@@ -374,6 +377,7 @@ export default {
         .then((res) => res.json())
         .then((result) => {
           console.log(result);
+          this.modalShow = false;
         });
     },
     updateInfo() {
@@ -405,6 +409,7 @@ export default {
         .then((res) => res.json())
         .then((result) => {
           console.log(result);
+          this.modalShow2 = false;
         });
     },
     openNav() {
