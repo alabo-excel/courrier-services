@@ -102,7 +102,7 @@
           +1682 337 1942
         </div>
       </a>
-      <a href="mailto:name1@mail.com">
+      <a href="mailto:info@quintessential-24.com">
         <div class="card1 p-5 m-4 text-center">
           <div class="py-2">
             <svg
@@ -118,7 +118,7 @@
               />
             </svg>
           </div>
-          info@QuintEssential.io
+          info@quintessential-24.com
         </div>
       </a>
     </div>

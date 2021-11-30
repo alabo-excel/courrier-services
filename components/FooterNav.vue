@@ -43,7 +43,7 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-3 mobile-margin-top">
               <h5 class="footer-head">Contact Us</h5>
-              <p class="footer-email">info@QuintEssential.io</p>
+              <p class="footer-email">info@quintessential-24.com</p>
               <p class="footer-phone">
                 +1682 337 1942
                 <br />
