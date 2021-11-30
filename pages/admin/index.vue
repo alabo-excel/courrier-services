@@ -485,6 +485,9 @@ export default {
 .flex-wrap {
   flex-wrap: wrap;
 }
+input {
+  width: 100%;
+}
 @media (max-width: 600px) {
   .sidepanel {
     width: 0px;

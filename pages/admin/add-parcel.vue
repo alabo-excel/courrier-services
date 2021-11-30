@@ -46,7 +46,7 @@
           </div>
           <div class="m-2 w-100">
             <input
-              type="data"
+              type="date"
               class="p-2 border"
               placeholder="Date"
               v-model="date"
@@ -330,6 +330,7 @@ export default {
         .then((res) => res.json())
         .then((result) => {
           console.log(result);
+          this.$router.push("/admin");
         });
     },
     logout() {
