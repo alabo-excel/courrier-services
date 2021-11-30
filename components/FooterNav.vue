@@ -4,13 +4,13 @@
       <div class="row justify-content-between">
         <div class="col-12 col-lg-3">
           <div>
-            <img src="../static/logo.png" alt="">
+            <img src="../static/logo.png" alt="" />
           </div>
           <p class="footer-text">
             In the year 2004, Quintessential Delivery Company has established
-            itself as a leading service oriented forwarding company. Quintessential
-            Delivery Company has an impressive list of more than 100 renowned
-            clients...
+            itself as a leading service oriented forwarding company.
+            Quintessential Delivery Company has an impressive list of more than
+            100 renowned clients....
           </p>
         </div>
         <div class="col-12 col-lg-8 mobile-row-top">
@@ -100,7 +100,7 @@ export default {
   padding: 69px 0px 20px 0px;
   color: #657ed4;
 }
-img{
+img {
   width: 130px;
 }
 .footer p {
