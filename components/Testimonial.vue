@@ -12,6 +12,7 @@
       :nav="false"
       :loop="true"
       :dots="false"
+      class="pt-5"
       :responsive="{
         0: { items: 1, nav: false },
         900: { items: 2, nav: false },
@@ -58,8 +59,9 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@900&display=swap");
 .card1 {
-  background: #fbfbff;
+  background: #657ed4;
   font-family: "Poppins", sans-serif;
+  color: #fbfbff;
 }
 .name {
   color: #657ed4;
@@ -67,10 +69,11 @@ export default {
 }
 .testimonial {
   position: relative;
+  background: #657ed4;
 }
 .next,
 .prev {
-  background: #657ed4;
+  background: #0d0106;
   text-align: center;
   border-radius: 100%;
   color: #fbfbff;
@@ -85,10 +88,10 @@ export default {
   font-family: "Rubik", sans-serif;
   font-size: 70px;
   opacity: 10%;
-  color: #657ed4;
+  color: #0d0106;
 }
 .small-heading {
-  color: #657ed4;
+  color: #0d0106;
   font-size: 40px;
   font-family: "Rubik", sans-serif;
 }
