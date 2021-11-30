@@ -127,6 +127,37 @@
           ><br />
         </div>
       </div>
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="600"
+            height="500"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=Port%20Rashid,%20Al%20Mina%20-%20Dubai%20-%20United%20Arab%20Emirates&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe
+          ><a href="https://www.whatismyip-address.com"></a><br /><style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 400px;
+              width: 330px;
+            }</style
+          ><a href="https://www.embedgooglemap.net"
+            >how to add google map in wordpress</a
+          ><style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 400px;
+              width: 330px;
+            }
+          </style>
+        </div>
+      </div>
     </div>
   </div>
 </template>

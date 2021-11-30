@@ -7,7 +7,7 @@
             <img src="../static/logo.png" alt="">
           </div>
           <p class="footer-text">
-            In the year 2004, quintessential Delivery Compny has established
+            In the year 2004, quintessential Delivery Company has established
             itself as a leading service oriented forwarding company. quintessential
             Delivery company has an impressive list of more than 100 renowned
             clients...
@@ -36,7 +36,7 @@
                 <NuxtLink class="footer-nav-item" to="/track">
                   Track Shipment
                 </NuxtLink>
-                <NuxtLink class="footer-nav-item" to="/tack">
+                <NuxtLink class="footer-nav-item" to="/track">
                   Find Parcel
                 </NuxtLink>
               </div>
