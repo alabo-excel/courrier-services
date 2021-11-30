@@ -66,7 +66,7 @@ export default {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result.data.singleParcel.locations);
+          // console.log(result.data.singleParcel.locations);
           this.progress = result.data.singleParcel.locations;
           this.search = true
         });

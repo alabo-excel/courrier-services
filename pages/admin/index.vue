@@ -344,7 +344,7 @@ export default {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result.data.parcels);
+        // console.log(result.data.parcels);
         this.parcels = result.data.parcels;
       });
   },
@@ -376,7 +376,7 @@ export default {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
+          // console.log(result);
           this.modalShow = false;
         });
     },
@@ -408,7 +408,7 @@ export default {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
+          // console.log(result);
           this.modalShow2 = false;
         });
     },
