@@ -4,8 +4,8 @@
       <div class="overlay"></div>
       <div class="overlay-text">
         We offer rapid and flexible delivery to your doorstep
-        <NuxtLink to="/about">
-          <div class="btn2 p-3 mt-3">KNOW MORE</div>
+        <NuxtLink to="/track">
+          <div class="btn2 p-3 mt-3">TRACK PARCEL</div>
         </NuxtLink>
       </div>
       <carousel

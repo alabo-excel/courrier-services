@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-12 col-lg-3">
-          <div></div>
+          <div>
+            <img src="../static/logo.png" alt="">
+          </div>
           <p class="footer-text">
             In the year 2004, quintessential Delivery Compny has established
             itself as a leading service oriented forwarding company. quintessential
@@ -97,6 +99,9 @@ export default {
   background-color: #0d0106;
   padding: 69px 0px 20px 0px;
   color: #657ed4;
+}
+img{
+  width: 130px;
 }
 .footer p {
   color: #fbfbff;

@@ -21,17 +21,69 @@
       />
       <input @click="submit" type="button" class="p-2 btn3" value="TRACK" />
     </div>
-    <div v-else class="m-lg-5 m-4">
-    <h2 class="py-4">Recent port and destination</h2>
-      <ul id="progress">
-        <li v-for="(location, index) in progress" :key="index">
-          <div class="node green"></div>
-          <p>{{ location.location }}</p>
-          <ul>
-            <li><div class="divider grey"></div></li>
-          </ul>
-        </li>
-      </ul>
+    <div v-else class="m-lg-5 m-4 d-lg-flex">
+      <div>
+        <h4 class="py-4">Recent port and destination</h4>
+        <ul id="progress">
+          <li v-for="(location, index) in progress" :key="index">
+            <div class="node green"></div>
+            <p>{{ location.location }}</p>
+            <ul>
+              <li><div class="divider green"></div></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="m-4">
+        <h4 class="my-3">Personal Data</h4>
+        <span
+          >Below is the personal details and consignment brief information
+          retrieved from third party to the receiver.</span
+        >
+        <div>
+          <h6 class="my-3">Senders Information</h6>
+          <span> Sender's Full Name: {{ this.data.senderInfo.name }} </span
+          ><br />
+          <span> Sender's Email Address: {{ this.data.senderInfo.email }} </span
+          ><br />
+          <span> Sender's Address: {{ this.data.senderInfo.address }} </span
+          ><br />
+          <span> Sender's City: {{ this.data.senderInfo.city }} </span><br />
+          <span> Sender Country: {{ this.data.senderInfo.country }} </span>
+        </div>
+        <div class="my-3">
+          <h6 class="my-2">Receiver's Information</h6>
+          <span> Receiver's Name: {{ this.data.receiverInfo.name }} </span
+          ><br />
+          <span>
+            Receiver's Email Address: {{ this.data.receiverInfo.email }} </span
+          ><br />
+          <span> Receiver's Number: {{ this.data.receiverInfo.phone }} </span
+          ><br />
+          <span> Delievery Address: {{ this.data.receiverInfo.address }} </span
+          ><br />
+          <span> Delievery City: {{ this.data.receiverInfo.city }} </span><br />
+          <span> Delievery Country: {{ this.data.receiverInfo.country }} </span>
+          <br />
+          <span> Postal Code: {{ this.data.receiverInfo.postCode }} </span
+          ><br />
+          <span
+            >Company Seal Logo: Consignment Description and Delivery
+            Details</span
+          >
+        </div>
+        <div class="my-3">
+          <h6 class="my-2">Delivery Information</h6>
+          <span>Trasport Method {{ this.data.transportMethod }} </span><br />
+          <span> Cargo Frieght Charge: {{ this.data.paymentMethod }} </span
+          ><br />
+          <span> Delievery Data: {{ this.data.deliveryDate }} </span><br />
+          <span> Goods Damage Safety: {{ this.data.insurance }} </span><br />
+          <span> Weight: {{ this.data.weight }} </span><br />
+          <span> Number of Consignment: {{ this.data.numberOfGoods }} </span
+          ><br />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -42,6 +94,7 @@ export default {
       search: false,
       parcelId: "",
       progress: null,
+      data: null,
     };
   },
   methods: {
@@ -54,11 +107,36 @@ export default {
         method: "POST",
         body: JSON.stringify({
           query: `
-            query{
+           query{
               singleParcel(parcelId: "${this.parcelId}"){
                 locations{
                   location
                 }
+                parcelName
+                transportMethod
+                deliveryDate
+                paymentMethod
+                insurance
+                weight
+                numberOfGoods
+                senderInfo{
+                  name
+                  email
+                  address
+                  city
+                  country
+                  phone
+                  postCode
+                }
+                receiverInfo{
+                  name
+                  email
+                  address
+                  city
+                  country
+                  phone
+                  postCode
+                }    
               }
             }
           `,
@@ -66,9 +144,10 @@ export default {
       })
         .then((res) => res.json())
         .then((result) => {
-          // console.log(result.data.singleParcel.locations);
+          console.log(result.data.singleParcel);
+          this.data = result.data.singleParcel;
           this.progress = result.data.singleParcel.locations;
-          this.search = true
+          this.search = true;
         });
     },
   },
@@ -147,15 +226,8 @@ li {
   line-height: 1px;
 }
 
-.blue {
-  background-color: rgba(82, 165, 255, 1);
-}
 .green {
   background-color: rgba(92, 184, 92, 1);
-}
-
-.grey {
-  background-color: rgba(201, 201, 201, 1);
 }
 
 .heading {
@@ -181,9 +253,16 @@ li {
   position: absolute;
   top: 20%;
 }
+span {
+  font-size: 13px;
+  font-weight: 500;
+}
 .btn3 {
   background-color: #0d0106;
   color: #fbfbff;
+}
+h6{
+  font-weight: 700;
 }
 @media screen and (max-width: 600px) {
   .overlay-text {

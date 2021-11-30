@@ -1,7 +1,9 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" class="px-lg-5 p-3 nav">
-      <b-navbar-brand href="#">QuintEssential</b-navbar-brand>
+      <b-navbar-brand href="#">
+        <img src="../static/logo.png" alt="">
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -53,4 +55,8 @@ a:hover {
   background-color: #0d0106;
   color: #fbfbff;
 }
+img{
+  width: 130px;
+  height: 50px;
+  }
 </style>
