@@ -7,6 +7,7 @@
         <div class="small-heading mx-2">TESTIMONIALS</div>
       </div>
     </div>
+    
     <carousel
       :autoplay="false"
       :nav="false"
