@@ -30,7 +30,7 @@
                 </NuxtLink>
               </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4">
               <h5 class="footer-head">Explore</h5>
               <div class="footer-nav">
                 <NuxtLink class="footer-nav-item" to="/track">
@@ -41,7 +41,7 @@
                 </NuxtLink>
               </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-3 mobile-margin-top">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 mobile-margin-top">
               <h5 class="footer-head">Contact Us</h5>
               <p class="footer-email">info@quintessential-24.com</p>
               <p class="footer-phone">

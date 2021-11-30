@@ -49,7 +49,12 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-seo-meta',
   ],
+  seoMeta: {
+    title: 'Quintessential delivery services',
+    description: "Quintessential delivery company is one of the World's leading premium delivery company. We've been delivering for Britain, The US, Afghanistan, South Korea and all of The middle East for over the years, and we've successfully deliver many parcels worldwide. Whilst we being a nationwide company, we take great pride in being able to offer a specialized and local service across the UK and Ireland. "
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
