@@ -17,40 +17,42 @@
         <div class="title py-3">Welcome to QuintEssential Delivery Company</div>
         <div>
           Quintessential delivery company is one of the World's leading premium
-          Quintessential delivery company. We've been delivering for Britain, The US,
-          Afghanistan and all of The middle East for over years, and we
-          successfully deliver many parcels a year worldwide. Whilst we are a
+          delivery company. We've been delivering for Britain, The US,
+          Afghanistan,Korea and all of The middle East for over the years, and we've
+          successfully deliver many parcels worldwide. Whilst we being a
           nationwide company, we take great pride in being able to offer a
-          specialist, local service, across the UK and Ireland. Our vast range
+          specialized and local service across the UK and Ireland. Our vast range
           of flexible and competitive services are delivered through a reliable
-          network built upon high levels of security and integrity. And with
-          industry experts in senior positions throughout our business we have
+          network built upon high levels of security and integrity with
+          industral experts in senior positions throughout our business we have
           the knowledge and experience to deliver all of your distribution
           requirements. Our end-to-end secure network is the best in the
           business with CCTV, VanCams, trailer tracker, parcel tracker and our
           caged network. We take care of your parcels by placing them in our
           caged network during transit. By reducing the number of times we
-          physically handle them, we minimise damages. Corporate Responsibility
-          At Quintessential delivery company Courier we take our responsibility
-          to do what’s right for Customers and Colleagues very seriously.
-          Procurement. Quintessential delivery company Courier ensures that best
-          value is derived from all purchases whilstdelivery-service-signature
-          minimising risk and ensuring the highest United s from all selected
+          physically handle them, we minimise damages. Because of the co-oporate responsibility
+          at Quintessential delivery company, Couriers take their responsibility
+          to do what’s right for Customers and Colleagues seriously.
+           Quintessential delivery company Courier ensures that best
+          value is derived from all purchases whilst delivery-service-signature
+          minimising risk and ensuring the highest for of standards from all selected
           suppliers. Written policies and procedures are consistently in place.
           At Quintessential delivery company, we really are committed to our
-          customers. Teamwork is key both internally within our own business and
+          customers testimony and satisfaction. Teamwork is key factor both internally within our own business and
           externally by working in true partnership with our customers. We
           operate at the premium end of the parcels market, and do everything we
-          can to satisfy the needs of our customers. That means being reliable,
-          being available, and in the event that things go wrong, being willing
+          can to satisfy the needs of our customers i.e being reliable,
+          being available, and in the event that things go wrong; being willing
           to go the extra mile to resolve the issue. With great management our
           progress over the years has been a successive rise, We've kept the
-          records straight as our clientele base spanned across the globe. We've
-          maintain a concrete security system, to ensure the safety of parcels
+          records straight as our client base spanned across the globe. We've
+          maintain a concrete security system, to ensure the safety of parcels.
+
+          <br/>
           Our mission is to provide trouble free courier service on a consistent
           basis. We show care and respect for each other and we show care and
           respect for each package we handle. We are dedicated to our customer’s
-          success..
+          happiness upon a successful job well done...
         </div>
       </div>
     </div>

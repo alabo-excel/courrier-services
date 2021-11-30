@@ -293,6 +293,8 @@ li p {
   font-family: "Poppins";
   margin-left: 25px;
   font-size: 15px;
+  position: relative;
+  top: -5px;
 }
 
 li {
