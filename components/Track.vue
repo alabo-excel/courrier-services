@@ -42,30 +42,57 @@
         >
         <div>
           <h6 class="my-3">Senders Information</h6>
-          <span> Sender's Full Name: {{ this.data.senderInfo.name }} </span
+          <span>
+            <img src="../static/user.png" class="icons mx-1" /> Sender's Full
+            Name: {{ this.data.senderInfo.name }} </span
           ><br />
-          <span> Sender's Email Address: {{ this.data.senderInfo.email }} </span
+          <span>
+            <img src="../static/mail.png" class="icons mx-1" /> Sender's Email
+            Address: {{ this.data.senderInfo.email }} </span
           ><br />
-          <span> Sender's Address: {{ this.data.senderInfo.address }} </span
+          <span>
+            <img src="../static/world.png" class="icons mx-1" /> Sender's
+            Address: {{ this.data.senderInfo.address }} </span
           ><br />
-          <span> Sender's City: {{ this.data.senderInfo.city }} </span><br />
-          <span> Sender Country: {{ this.data.senderInfo.country }} </span>
+          <span>
+            <img src="../static/world.png" class="icons mx-1" /> Sender's City:
+            {{ this.data.senderInfo.city }} </span
+          ><br />
+          <span>
+            <img src="../static/world.png" class="icons mx-1" /> Sender Country:
+            {{ this.data.senderInfo.country }}
+          </span>
         </div>
         <div class="my-3">
           <h6 class="my-2">Receiver's Information</h6>
-          <span> Receiver's Name: {{ this.data.receiverInfo.name }} </span
+          <span>
+            <img src="../static/user.png" class="icons mx-1" /> Receiver's Name:
+            {{ this.data.receiverInfo.name }} </span
           ><br />
           <span>
+            <img src="../static/mail.png" class="icons mx-1" />
             Receiver's Email Address: {{ this.data.receiverInfo.email }} </span
           ><br />
-          <span> Receiver's Number: {{ this.data.receiverInfo.phone }} </span
+          <span>
+            <img src="../static/phone.png" class="icons mx-1" /> Receiver's
+            Number: {{ this.data.receiverInfo.phone }} </span
           ><br />
-          <span> Delievery Address: {{ this.data.receiverInfo.address }} </span
+          <span>
+            <img src="../static/world.png" class="icons mx-1" /> Delievery
+            Address: {{ this.data.receiverInfo.address }} </span
           ><br />
-          <span> Delievery City: {{ this.data.receiverInfo.city }} </span><br />
-          <span> Delievery Country: {{ this.data.receiverInfo.country }} </span>
+          <span>
+            <img src="../static/world.png" class="icons mx-1" /> Delievery City:
+            {{ this.data.receiverInfo.city }} </span
+          ><br />
+          <span>
+            <img src="../static/world.png" class="icons mx-1" /> Delievery
+            Country: {{ this.data.receiverInfo.country }}
+          </span>
           <br />
-          <span> Postal Code: {{ this.data.receiverInfo.postCode }} </span
+          <span>
+            <img src="../static/world.png" class="icons mx-1" /> Postal Code:
+            {{ this.data.receiverInfo.postCode }} </span
           ><br />
           <span
             >Company Seal Logo: Consignment Description and Delivery
@@ -74,13 +101,29 @@
         </div>
         <div class="my-3">
           <h6 class="my-2">Delivery Information</h6>
-          <span>Trasport Method {{ this.data.transportMethod }} </span><br />
-          <span> Cargo Frieght Charge: {{ this.data.paymentMethod }} </span
+          <span>
+            <img src="../static/cargo.png" class="icons mx-1" /> Trasport Method
+            {{ this.data.transportMethod }} </span
           ><br />
-          <span> Delievery Data: {{ this.data.deliveryDate }} </span><br />
-          <span> Goods Damage Safety: {{ this.data.insurance }} </span><br />
-          <span> Weight: {{ this.data.weight }} </span><br />
-          <span> Number of Consignment: {{ this.data.numberOfGoods }} </span
+          <span>
+            <img src="../static/cargo.png" class="icons mx-1" /> Cargo Frieght
+            Charge: {{ this.data.paymentMethod }} </span
+          ><br />
+          <span>
+            <img src="../static/cargo.png" class="icons mx-1" /> Delievery Date:
+            {{ this.data.deliveryDate }} </span
+          ><br />
+          <span>
+            <img src="../static/cargo.png" class="icons mx-1" /> Goods Damage
+            Safety: {{ this.data.insurance }} </span
+          ><br />
+          <span>
+            <img src="../static/cargo.png" class="icons mx-1" /> Weight:
+            {{ this.data.weight }} </span
+          ><br />
+          <span>
+            <img src="../static/cargo.png" class="icons mx-1" /> Number of
+            Consignment: {{ this.data.numberOfGoods }} </span
           ><br />
         </div>
       </div>
@@ -144,7 +187,7 @@ export default {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log(result.data.singleParcel);
+          // console.log(result.data.singleParcel);
           this.data = result.data.singleParcel;
           this.progress = result.data.singleParcel.locations;
           this.search = true;
@@ -261,8 +304,12 @@ span {
   background-color: #0d0106;
   color: #fbfbff;
 }
-h6{
+h6 {
   font-weight: 700;
+}
+.icons {
+  width: 12px;
+  height: 12px;
 }
 @media screen and (max-width: 600px) {
   .overlay-text {
@@ -292,6 +339,10 @@ h6{
   }
   .line {
     display: none;
+  }
+  .icons {
+    width: 16px;
+    height: 16px;
   }
 }
 </style>

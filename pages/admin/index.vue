@@ -270,13 +270,23 @@
         <div class="heading my-4">Parcels</div>
         <div class="d-lg-flex flex-wrap">
           <div
-            v-for="parcel in parcels"
-            :key="parcel._id"
-            class="w-100 border m-2 p-2"
+            v-for="(parcel, index) in parcels"
+            :key="index"
+            class="w-100 border m-2 p-2 d-flex"
           >
-            Parcel Name: {{ parcel.parcelName }}
-            <div>Receiver Name: {{ parcel.receiverInfo.name }}</div>
-            <div>{{ parcel._id }}</div>
+            <div>
+              Parcel Name: {{ parcel.parcelName }}
+              <div>Receiver Name: {{ parcel.receiverInfo.name }}</div>
+              <div>{{ parcel._id }}</div>
+            </div>
+            <div>
+              <input
+                type="button"
+                value="Delete"
+                class="p-2 openbtn2"
+                @click="deleteParcel(index)"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -350,6 +360,28 @@ export default {
   },
   methods: {
     ...mapMutations(["userLoggedOut"]),
+    deleteParcel(index) {
+      fetch("https://quintessential.herokuapp.com/api", {
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE0ZGUxYjNlNGY2YjBiMGZkYWVkYTYiLCJlbWFpbCI6ImFkbWluMTIzQGdtYWlsLmNvbSIsImlhdCI6MTYzODE5NDc5NiwiZXhwIjoxNjQwNzg2Nzk2fQ.rbKpdqwGZaXtnFbk5l_QspTyMOh_hjG8mDe2t53wRBY`,
+        },
+        method: "POST",
+        body: JSON.stringify({
+          query: `
+            query{
+              deleteParcel(parcelId:"${this.parcels[index]._id}"){
+                parcelName
+              }
+            }
+          `,
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          // console.log(result);
+        });
+    },
     logout() {
       this.userLoggedOut();
       this.$router.push("/login");
