@@ -7,7 +7,7 @@
             <img src="../static/logo.png" alt="">
           </div>
           <p class="footer-text">
-            In the year 2004, quintessential Delivery Company has established
+            In the year 2004, Quintessential Delivery Company has established
             itself as a leading service oriented forwarding company. quintessential
             Delivery company has an impressive list of more than 100 renowned
             clients...
