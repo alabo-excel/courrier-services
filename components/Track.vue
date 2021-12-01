@@ -125,6 +125,9 @@
             <img src="../static/cargo.png" class="icons mx-1" /> Number of
             Consignment: {{ this.data.numberOfGoods }} </span
           ><br />
+          <span>
+            <img src="../static/cargo.png" class="icons mx-1" /> Delivery Status: Pending </span
+          ><br />
         </div>
       </div>
       <div class="mapouter">
@@ -265,6 +268,9 @@ img {
   margin: 0;
   padding: 0;
 }
+#progress{
+  position: relative;
+}
 
 input[type="button"] {
   margin-top: 20px;
@@ -282,10 +288,11 @@ input[type="button"] {
 }
 
 .divider {
-  height: 50px;
+  height: 70px;
   width: 2px;
   margin-left: 8px;
   transition: all 800ms ease;
+  margin-top: -7px;
 }
 
 li p {
@@ -293,14 +300,14 @@ li p {
   font-family: "Poppins";
   margin-left: 25px;
   font-size: 15px;
-  position: relative;
-  top: -5px;
+  position: absolute;
 }
 
 li {
   list-style: none;
-  line-height: 1px;
+  /* line-height: 1px; */
 }
+
 
 .green {
   background-color: rgba(92, 184, 92, 1);
